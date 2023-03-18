@@ -9,25 +9,28 @@ int main(void)
 	int j;
 	int k;
 
-	for (i = 0 ; i < 10 ; i++)
+	i = 0;
+	while (i <= 7)
 	{
-		for (j = 1 ; j < 10 ; j++)
+		j = i + 1;
+		while (j <= 8)
 		{
-			for (k = 2 ; k < 10 ; k++)
+			k = j + 1;
+			while (k <= 9)
 			{
-				if (i < j && j < k)
+				putchar(i + 48);
+				putchar(j + 48);
+				putchar(k + 48);
+				if (i < 7)
 				{
-					putchar(i + 0);
-					putchar(j + 0);
-					putchar(k + 0);
-					if (i + j + k != 24)
-					{
-						putchar(',');
-						putchar(' ');
-					}
+					putchar(',');
+					putchar(' ');
 				}
+				k++;
 			}
+			j++;
 		}
+		i++;
 	}
 	putchar('\n');
 
