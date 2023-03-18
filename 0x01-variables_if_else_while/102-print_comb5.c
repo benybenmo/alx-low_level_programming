@@ -6,25 +6,25 @@
 
 int main(void)
 {
-	int i1;
-	int i2;
+	int num1, num2;
 
-	for (i1 = 0; i1 <= 9; i1++)
+	for (num1 = 0; num1 <= 98; num2++)
 	{
-	for (i2 = i1; i2 <= 9; i2++)
-	{
-		putchar((i1 / 10) + '0');
-		putchar((i1 % 10) + '0');
-		putchar(' ');
-		putchar((i2 / 10) + '0');
-		putchar((i2 % 10) + '0');
-		if (i1 != 9 || i2 != 9)
+		for (num2 = num1 + 1; num2 <= 99; num2++)
 		{
+			putchar((num1 / 10) + '0');
+			putchar((num1 % 10) + '0');
+			putchar(' ');
+			putchar((num2 / 10) + '0');
+			putchar((num2 % 10) + '0');
+
+			if (num1 == 98 && num2 ==  99)
+				continue;
 			putchar(',');
 			putchar(' ');
 		}
 	}
-	}
 	putchar('\n');
+
 	return (0);
 }
